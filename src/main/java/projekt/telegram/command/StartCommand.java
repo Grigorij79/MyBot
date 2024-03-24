@@ -11,6 +11,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 import org.telegram.telegrambots.meta.bots.AbsSender;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -25,9 +26,19 @@ public class StartCommand extends BotCommand {
 
     @Override
     public void execute(AbsSender absSender, User user, Chat chat, String[] arguments) {
+
         StringBuilder messageBuilder = new StringBuilder();
         String userName = user.getFirstName();
-        messageBuilder.append(new String("Hello  ".getBytes(), StandardCharsets.UTF_8))
+        String userName2 = user.getUserName();
+        String userName3 = user.getLastName();
+        long userName4 = user.getId();
+        System.out.println("userName = " + userName);
+        System.out.println("userName2 = " + userName2);
+        System.out.println("userName3 = " + userName3);
+        System.out.println("userName4 = " + userName4);
+        StringWriter MassageBuilder;
+        System.out.println("chat.getDescription() = " + chat.getDescription());
+                messageBuilder.append(new String("Hello  ".getBytes(), StandardCharsets.UTF_8))
                 .append(userName).append("\n")
                 .append(new String(("Laskavo prosimo").getBytes(), StandardCharsets.UTF_8));
         SendMessage answer = new SendMessage();

@@ -73,16 +73,16 @@ public class KeyboardActions extends BotConnection {
 
         List<List<InlineKeyboardButton>> buttons = new ArrayList<>();
         buttons.add(Arrays.asList(
-                InlineKeyboardButton.builder().text("ROUNDED_INDEX").callbackData("4").build()
+                InlineKeyboardButton.builder().text("ROUNDED_INDEX").callbackData("15").build()
         ));
         buttons.add(Arrays.asList(
-                InlineKeyboardButton.builder().text("BANK").callbackData("7").build()
+                InlineKeyboardButton.builder().text("BANK").callbackData("25").build()
         ));
         buttons.add(Arrays.asList(
-                InlineKeyboardButton.builder().text("CURRENCY").callbackData("15").build()
+                InlineKeyboardButton.builder().text("CURRENCY").callbackData("35").build()
         ));
         buttons.add(Arrays.asList(
-                InlineKeyboardButton.builder().text("REMINDER_TIME").callbackData("23").build()
+                InlineKeyboardButton.builder().text("REMINDER_TIME").callbackData("0").build()
         ));
         buttons.add(Arrays.asList(
                 InlineKeyboardButton.builder().text("HOME").callbackData("HOME").build()
